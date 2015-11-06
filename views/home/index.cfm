@@ -59,36 +59,5 @@
 	#html.endForm()#
 
 </div>
-<!--End sidebar-->
-<!--============================Main Column============================-->
-<div class="main_column" id="main_column">
-	<div class="box">
-		<div class="header">
-			<img src="<!---#prc.cbroot#/includes/images/comments_32.png--->" alt="sofa" width="30" height="30" />
-			Socialite Settings
-		</div>
-		<div class="body">
 
-			<p>From here you can control how the Google Analytics operates.</p>
-
-			<div class="body_vertical_nav clearfix">
-				<ul class="vertical_nav">
-					<li class="active"><a href="##global_settings"><img src="#prc.cbRoot#/includes/images/settings_black.png" alt="modifiers"/> Global Settings</a></li>
-				</ul>
-				<div class="main_column">
-					<!-- Content area that wil show the form and stuff -->
-					<div class="panes_vertical">
-						<div>
-							<fieldset>
-								<legend><img src="#prc.cbRoot#/includes/images/settings_black.png" alt="modifiers"/> <strong>Global Settings</strong></legend>
-								#html.textField(name = "trackingId", label = "Tracking Id", value = "", class = "textfield", size = "30")#<br/>
-							</fieldset>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-#html.endForm()#
 </cfoutput>
