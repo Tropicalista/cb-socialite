@@ -1,16 +1,16 @@
 {
-    "name":"Socialite",
+    "name":"cbSocialite",
     "version":"1.0.0",
     "author":"Francesco Pepe",
     "location":"",
     "directory":"",
     "createPackageDirectory":true,
     "packageDirectory":"",
-    "homepage":"https://github.com/Tropicalista/socialite",
+    "homepage":"https://github.com/Tropicalista/cb-socialite",
     "documentation":"http://wiki.coldbox.org",
     "repository":{
         "type":"git",
-        "url":"https://github.com/Tropicalista/socialite"
+        "url":"https://github.com/Tropicalista/cb-socialite"
     },
     "bugs":"",
     "slug":"socialite",
