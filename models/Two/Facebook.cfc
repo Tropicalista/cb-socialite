@@ -2,27 +2,21 @@ component extends="BaseProvider" implements="contentbox.modules_user.cbsocialite
 
     /**
      * The base Facebook Graph URL.
-     *
      */
     property name="graphUrl";
 
     /**
      * The Graph API version for the request.
-     *
      */
     property name="version";
 
     /**
      * The scopes being requested.
-     *
-     * @var array
      */
     property name="scopes" type="array";
 
     /**
      * Display the dialog in a popup view.
-     *
-     * @var bool
      */
     property name="popup" type="boolean";
 
@@ -122,8 +116,6 @@ component extends="BaseProvider" implements="contentbox.modules_user.cbsocialite
 
     /**
      * Set the dialog to be displayed as a popup.
-     *
-     * @return this
      */
     public function asPopup(){
         variables.popup = true;

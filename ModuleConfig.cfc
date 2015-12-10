@@ -4,7 +4,7 @@
 component {
 
 	// Module Properties
-	this.title 				= "Socialite";
+	this.title 				= "cbSocialite";
 	this.author 			= "Francesco Pepe";
 	this.webURL 			= "http://www.tropicalseo.net";
 	this.description 		= "A social login module";

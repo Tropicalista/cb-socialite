@@ -17,16 +17,16 @@
 
                 <ul class="nav nav-tabs">
                     <li class="active">
-                    	<a href="##facebook" data-toggle="tab"><i class="fa fa-facebook"></i> Facebook</a>
+                    	<a href="##facebook" data-toggle="tab"><i class="fa fa-facebook"></i> <span class="hidden-xs">Facebook</span></a>
                     </li>
                     <li>
-                        <a href="##google" data-toggle="tab"><i class="fa fa-google"></i> Google</a>
+                        <a href="##google" data-toggle="tab"><i class="fa fa-google"></i> <span class="hidden-xs">Google</span></a>
                     </li>
                     <li>
-                        <a href="##linkedin" data-toggle="tab"><i class="fa fa-linkedin"></i> Linkedin</a>
+                        <a href="##linkedin" data-toggle="tab"><i class="fa fa-linkedin"></i> <span class="hidden-xs">Linkedin</span></a>
                     </li>
                     <li>
-                        <a href="##github" data-toggle="tab"><i class="fa fa-github"></i> Github</a>
+                        <a href="##github" data-toggle="tab"><i class="fa fa-github"></i> <span class="hidden-xs">Github</span></a>
                     </li>
                 </ul>
 
