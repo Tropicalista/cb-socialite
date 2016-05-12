@@ -36,8 +36,9 @@ component extends="BaseProvider" implements="contentbox.modules_user.cbsocialite
 
     /**
      * Get auth url
+     * @state
      */
-    function getAuthUrl(state){
+    function getAuthUrl( state ){
         return this.buildAuthUrlFromBase('https://www.facebook.com/' & variables.version & '/dialog/oauth', state);
     }
 
@@ -54,7 +55,7 @@ component extends="BaseProvider" implements="contentbox.modules_user.cbsocialite
      * @param  string  code
      * @return string
      */
-    public function getAccessToken(code){
+    public function getAccessToken( code) {
         var params = this.getTokenFields( arguments.code );
 
         httpService = new http(); 
