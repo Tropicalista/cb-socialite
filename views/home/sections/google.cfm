@@ -24,11 +24,13 @@
         groupWrapper="div class=form-group"
     )#
 
+    <input type="hidden" value="#cgi.http_host#/socialite/provider/response/google" name="google.redirect_url">
     <!--- Redirect Url --->
     #html.textField( 
         name="google.redirect_url",
         label="Redirect Url:",
-        value=prc.socialiteSettings.google.redirect_url,
+        value="#cgi.http_host#/socialite/provider/response/google",
+        disabled="true",
         class="form-control",
         wrapper="div class=controls",
         labelClass="control-label",

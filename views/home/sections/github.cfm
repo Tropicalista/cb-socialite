@@ -24,11 +24,13 @@
         groupWrapper="div class=form-group"
     )#
 
+    <input type="hidden" value="#cgi.http_host#/socialite/provider/response/github" name="github.redirect_url">
     <!--- Redirect Url --->
     #html.textField( 
         name="github.redirect_url",
         label="Redirect Url:",
-        value=prc.socialiteSettings.github.redirect_url,
+        value="#cgi.http_host#/socialite/provider/response/github",
+        disabled="true",
         class="form-control",
         wrapper="div class=controls",
         labelClass="control-label",

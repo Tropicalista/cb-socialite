@@ -24,11 +24,13 @@
         groupWrapper="div class=form-group"
     )#
 
+    <input type="hidden" value="#cgi.http_host#/socialite/provider/response/linkedin" name="linkedin.redirect_url">
     <!--- Redirect Url --->
     #html.textField( 
         name="linkedin.redirect_url",
         label="Redirect Url:",
-        value=prc.socialiteSettings.linkedin.redirect_url,
+        value="#cgi.http_host#/socialite/provider/response/linkedin",
+        disabled="true",
         class="form-control",
         wrapper="div class=controls",
         labelClass="control-label",

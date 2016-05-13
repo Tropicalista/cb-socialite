@@ -26,12 +26,13 @@
         labelClass="control-label",
         groupWrapper="div class=form-group"
     )#
-
+    <input type="hidden" value="#cgi.http_host#/socialite/provider/response/facebook" name="facebook.redirect_url">
     <!--- Redirect Url --->
     #html.textField( 
         name="facebook.redirect_url",
         label="Redirect Url:",
-        value=prc.socialiteSettings.facebook.redirect_url,
+        value="#cgi.http_host#/socialite/provider/response/facebook",
+        disabled="true",
         class="form-control",
         title="The Facebook redirect url: your domain + /socialite/provider + /response/facebook",
         wrapper="div class=controls",
