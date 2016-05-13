@@ -25,7 +25,7 @@ component extends="BaseProvider" implements="contentbox.modules_user.cbsocialite
      */
     function init( clientId, clientSecret, redirectUrl ){
         super.init( arguments.clientId, arguments.clientSecret, arguments.redirectUrl );
-        variables.version = 'v2.5';
+        variables.version = 'v2.6';
         variables.scopes = ['email'];
         variables.graphUrl = 'https://graph.facebook.com';
         variables.fields = "name,email,gender,verified";
@@ -102,13 +102,11 @@ component extends="BaseProvider" implements="contentbox.modules_user.cbsocialite
     function mapUserToObject( struct user )
     {
         avatarUrl = variables.graphUrl & '/' & variables.version & '/' & user['id'] & '/picture';
-        firstName = structKeyExists( user, 'first_name' ) ? user['first_name'] : "";
-        lastName = structKeyExists( user, 'last_name' ) ? user['last_name'] : "";
 
         return  {
             'id' = user['id'], 
             'nickname' = "", 
-            'name' = firstName & ' ' & lastName,
+            'name' = structKeyExists( user, 'first_name' ) ? user['first_name'] : "",
             'email' = structKeyExists( user, 'email' ) ? user['email'] : "", 
             'avatar' = avatarUrl & '?type=normal',
             'avatar_original' = avatarUrl & '?width=1920'

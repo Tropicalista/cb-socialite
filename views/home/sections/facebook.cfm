@@ -5,13 +5,15 @@
     <!--- Client Id --->
     #html.textField( 
         name="facebook.client_id",
-        label="Client Id:",
+        label="App Id:",
         value=prc.socialiteSettings.facebook.client_id,
         class="form-control",
+        title="The Facebook App ID",
         wrapper="div class=controls",
         labelClass="control-label",
         groupWrapper="div class=form-group"
     )#
+            <p class="help-block">Example block-level help text here.</p>
 
     <!--- Client Secret --->
     #html.textField( 
@@ -19,6 +21,7 @@
         label="Client Secret:",
         value=prc.socialiteSettings.facebook.client_secret,
         class="form-control",
+        title="The Facebook client secret",
         wrapper="div class=controls",
         labelClass="control-label",
         groupWrapper="div class=form-group"
@@ -30,6 +33,7 @@
         label="Redirect Url:",
         value=prc.socialiteSettings.facebook.redirect_url,
         class="form-control",
+        title="The Facebook redirect url: your domain + /socialite/provider + /response/facebook",
         wrapper="div class=controls",
         labelClass="control-label",
         groupWrapper="div class=form-group"

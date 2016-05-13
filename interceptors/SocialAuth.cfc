@@ -1,21 +1,34 @@
 component extends="coldbox.system.Interceptor" {
 
-	//------------------------------------------------------------------------------------------------
-	public void function cbadmin_beforeLoginContent(event, interceptData) {
+	property name="settingsService"	inject="id:settings@socialite";
 
-			savecontent variable="buttons" {
-				writeOutput('
-					<div class="container-fluid">
-					<div class="col-md-4 col-md-offset-4">
-					<a href="socialite/provider/facebook" class="btn btn-primary">Facebook</a>
-					<a href="socialite/provider/google" class="btn btn-danger">Google</a>
-					<a href="socialite/provider/linkedin" class="btn btn-primary">Linkedin</a>
-					<a href="socialite/provider/github" class="btn btn-warning">Github</a>
-					</div>
-					</div>
-				');
-			};
-			appendToBuffer( buttons );
+	//------------------------------------------------------------------------------------------------
+	public void function cbadmin_beforeLoginForm(event, interceptData) {
+
+		prc.socialiteSettings = deserializeJson(settingsService.getSettings().getValue());
+
+		addAsset("#event.getModuleRoot( "contentbox" )#/modules_user/cbSocialite/includes/css/socialite.css");	
+
+		savecontent variable="buttons" {
+			if( structKeyExists( prc.socialiteSettings.google, "client_secret" ) ){
+				writeOutput('<a href="socialite/provider/google" class="btn btn-block google social"><i class="fa fa-google-plus"></i> Google</a>');
+			}
+			if( structKeyExists( prc.socialiteSettings.facebook, "client_secret" ) ){
+				writeOutput('<a href="socialite/provider/facebook" class="btn btn-block facebook social"><i class="fa fa-facebook"></i> Facebook</a>');
+			}
+			if( structKeyExists( prc.socialiteSettings.linkedin, "client_secret" ) ){
+				writeOutput('<a href="socialite/provider/linkedin" class="btn btn-block linkedin social"><i class="fa fa-linkedin"></i> Linkedin</a>');
+			}
+			if( structKeyExists( prc.socialiteSettings.github, "client_secret" ) ){
+				writeOutput('<a href="socialite/provider/github" class="btn btn-block github social"><i class="fa fa-github"></i> Github</a>');
+			}
+			writeOutput('
+				<br/>
+				<hr/>
+				<br/>
+			');
+		};
+		appendToBuffer( buttons );
 
 	}
 

@@ -7,6 +7,7 @@ component{
 	property name="user" inject="BaseUser@socialite";
 	property name="authorService" 	inject="id:authorService@cb";
 	property name="securityService" 	inject="id:securityService@cb";
+	property name="cb"				inject="cbhelper@cb";
 
 	function index(event,rc,prc){
 		event.setView("home/index");
@@ -20,6 +21,7 @@ component{
 	}
 
 	function response(event,rc,prc){
+
 		prc.user = socialite.with(rc.provider).user(rc.code);
 
 		var author = authorService.findWhere( {
@@ -33,6 +35,8 @@ component{
 			securityService.updateAuthorLoginTimestamp( author );
 			// set them in session
 			securityService.setAuthorSession( author );
+		}else{
+			getInstance("messagebox@cbMessagebox").error( cb.r( "messages.invalid_credentials@security" ) );
 		}
 
 		setNextEvent( "cbadmin.dashboard" );

@@ -17,7 +17,7 @@
     #html.textField( 
         name="linkedin.client_secret",
         label="Client Secret:",
-        value=prc.socialiteSettings.linkedin.client_id,
+        value=prc.socialiteSettings.linkedin.client_secret,
         class="form-control",
         wrapper="div class=controls",
         labelClass="control-label",
@@ -28,7 +28,7 @@
     #html.textField( 
         name="linkedin.redirect_url",
         label="Redirect Url:",
-        value=prc.socialiteSettings.linkedin.client_id,
+        value=prc.socialiteSettings.linkedin.redirect_url,
         class="form-control",
         wrapper="div class=controls",
         labelClass="control-label",

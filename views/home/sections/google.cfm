@@ -1,6 +1,6 @@
 <cfoutput>
 <fieldset>
-    <legend><i class="fa fa-google fa-lg"></i>  Google Options</legend>
+    <legend><i class="fa fa-google-plus fa-lg"></i>  Google Options</legend>
     
     <!--- Client Id --->
     #html.textField( 
@@ -17,7 +17,7 @@
     #html.textField( 
         name="google.client_secret",
         label="Client Secret:",
-        value=prc.socialiteSettings.google.client_id,
+        value=prc.socialiteSettings.google.client_secret,
         class="form-control",
         wrapper="div class=controls",
         labelClass="control-label",
@@ -28,7 +28,7 @@
     #html.textField( 
         name="google.redirect_url",
         label="Redirect Url:",
-        value=prc.socialiteSettings.google.client_id,
+        value=prc.socialiteSettings.google.redirect_url,
         class="form-control",
         wrapper="div class=controls",
         labelClass="control-label",

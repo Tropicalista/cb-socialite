@@ -63,8 +63,7 @@ component accessors="true" {
 		var asettings = [];
 		var props = {name = "socialite", value = serializeJson(setting)};
 
-		arrayAppend( aSettings, new(properties=props) );
-		saveAll( aSettings );
+		settingService.save( settingService.new(properties=props) );
 	}
 
 }

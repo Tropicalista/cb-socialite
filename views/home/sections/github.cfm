@@ -17,7 +17,7 @@
     #html.textField( 
         name="github.client_secret",
         label="Client Secret:",
-        value=prc.socialiteSettings.github.client_id,
+        value=prc.socialiteSettings.github.client_secret,
         class="form-control",
         wrapper="div class=controls",
         labelClass="control-label",
@@ -28,7 +28,7 @@
     #html.textField( 
         name="github.redirect_url",
         label="Redirect Url:",
-        value=prc.socialiteSettings.github.client_id,
+        value=prc.socialiteSettings.github.redirect_url,
         class="form-control",
         wrapper="div class=controls",
         labelClass="control-label",

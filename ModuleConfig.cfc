@@ -22,26 +22,7 @@ component {
 		// module settings - stored in modules.name.settings
 		settings = {
 			oauth = {
-				/*facebook = {
-					client_id = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					client_secret = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					redirect_url = "http://localhost/socialauth/provider/response/facebook"					
-				},
-				google = {
-					client_id = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					client_secret = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					redirect_url = "http://localhost/socialauth/provider/response/google"					
-				},
-				github = {
-					client_id = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					client_secret = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					redirect_url = "http://localhost/socialauth/provider/response/github"					
-				},
-				linkedin = {
-					client_id = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					client_secret = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					redirect_url = "http://127.0.0.1/socialauth/provider/response/linkedin"					
-				}*/
+
 			}
 		};
 
@@ -85,6 +66,22 @@ component {
 		var menuService = controller.getWireBox().getInstance("AdminMenuService@cb");
 		// Remove Menu Contribution
 		menuService.removeSubMenu(topMenu=menuService.MODULES,name="Socialite");
+
+	}
+
+
+	public any function onDeactivate(param) {
+		
+		// remove settings
+		var settingService = controller.getWireBox().getInstance("SettingService@cb");
+		var args = { name="socialite" };
+		var setting = settingService.findWhere( criteria=args );
+		if( !isNull( setting ) ){
+			settingService.delete( setting );
+		}
+		// Flush the settings cache so our new settings are reflected
+		settingService.flushSettingsCache();
+
 	}
 
 }
