@@ -1,4 +1,4 @@
-# SocialBox
+# Socialite for ContentBox
 
 A cool module to handle oauth2 authentication.
 
@@ -11,10 +11,4 @@ Currently support:
 
 Usage:
 
-`socialite.init().with('facebook').redirect()`
-
-This will prompt you to authentication page. Then simply:
-
-`socialite.with('facebook').user(rc.code)`
-
-And you will get user data.
+Go to module page in admin and add your credentials.
