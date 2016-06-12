@@ -22,8 +22,7 @@ Go to module page in admin and add your credentials.
 - Then select *APIs & auth* from the sidebar and click on *Credentials* tab
 - Click **CREATE NEW CLIENT ID** button
  - **Application Type**: Web Application
- - **Authorized Javascript origins**: *http://localhost:3000*
- - **Authorized redirect URI**: *http://localhost:3000*
+ - **Authorized redirect URI**: *http://YOUR-SITE-URL*
 
 **Note:** Make sure you have turned on **Contacts API** and **Google+ API** in the *APIs* tab.
 
@@ -35,19 +34,7 @@ Go to module page in admin and add your credentials.
 - Enter *Display Name*, then choose a category, then click **Create app**
 - Click on *Settings* on the sidebar, then click **+ Add Platform**
 - Select **Website**
-- Enter *http://localhost:3000* for *Site URL*
-
-<hr>
-
-<img src="https://g.twimg.com/Twitter_logo_blue.png" height="70">
-- Sign in at [https://apps.twitter.com](https://apps.twitter.com/)
-- Click on **Create New App**
-- Enter your *Application Name*, *Description* and *Website*
-- For **Callback URL**: *http://127.0.0.1:3000*
-- Go to **Settings** tab
-- Under *Application Type* select **Read and Write** access
-- Check the box **Allow this application to be used to Sign in with Twitter**
-- Click **Update this Twitter's applications settings**
+- Enter *http://YOUR-SITE-URL* for *Site URL*
 
 <hr>
 
