@@ -12,7 +12,7 @@
         "type":"git",
         "url":"https://github.com/Tropicalista/cb-socialite"
     },
-    "bugs":"",
+    "bugs":"https://github.com/Tropicalista/cb-socialite/issues",
     "slug":"socialite",
     "shortDescription":"An oauth2 module",
     "description":"",
@@ -40,48 +40,8 @@
             "url":"http://www.apache.org/licenses/LICENSE-2.0.html"
         }
     ],
-    "contributors":[
-        
-    ],
     "dependencies":{
-        "cbstorages":"1.0.0"
-    },
-    "devDependencies":{
-        
-    },
-    "installPaths":{
-        
-    },
-    "ignore":[
-        
-    ],
-    "testbox":{
-        "runner":[
-            {
-                "default":""
-            }
-        ],
-        "labels":[
-            
-        ],
-        "reporter":"",
-        "reporterResults":"",
-        "bundles":[
-            ""
-        ],
-        "directory":{
-            "mapping":"",
-            "recurse":true
-        },
-        "watchers":[
-            
-        ],
-        "notify":{
-            "emails":[
-                
-            ],
-            "growl":"",
-            "url":""
-        }
+        "cbstorages":"1.0.0",
+        "socialite":"stable"
     }
 }

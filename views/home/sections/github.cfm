@@ -29,8 +29,9 @@
     #html.textField( 
         name="github.redirect_url",
         label="Redirect Url:",
-        value="#cgi.http_host#/socialite/provider/response/github",
-        disabled="true",
+        placeholder="#cgi.http_host#/socialite/provider/response/github",
+        value="#prc.socialiteSettings.github.redirect_url#",
+        disabled="false",
         class="form-control",
         wrapper="div class=controls",
         labelClass="control-label",

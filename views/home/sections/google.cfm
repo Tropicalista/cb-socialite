@@ -29,8 +29,8 @@
     #html.textField( 
         name="google.redirect_url",
         label="Redirect Url:",
-        value="#cgi.http_host#/socialite/provider/response/google",
-        disabled="true",
+        placeholder="#cgi.http_host#/socialite/provider/response/google",
+        value="#prc.socialiteSettings.google.redirect_url#",
         class="form-control",
         wrapper="div class=controls",
         labelClass="control-label",

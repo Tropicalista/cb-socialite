@@ -29,8 +29,8 @@
     #html.textField( 
         name="linkedin.redirect_url",
         label="Redirect Url:",
-        value="#cgi.http_host#/socialite/provider/response/linkedin",
-        disabled="true",
+        placeholder="#cgi.http_host#/socialite/provider/response/linkedin",
+        value="#prc.socialiteSettings.linkedin.redirect_url#",
         class="form-control",
         wrapper="div class=controls",
         labelClass="control-label",

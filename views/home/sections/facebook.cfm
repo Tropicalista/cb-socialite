@@ -31,8 +31,8 @@
     #html.textField( 
         name="facebook.redirect_url",
         label="Redirect Url:",
-        value="#cgi.http_host#/socialite/provider/response/facebook",
-        disabled="true",
+        placeholder="#cgi.http_host#/socialite/provider/response/facebook",
+        value="#prc.socialiteSettings.facebook.redirect_url#",
         class="form-control",
         title="The Facebook redirect url: your domain + /socialite/provider + /response/facebook",
         wrapper="div class=controls",
