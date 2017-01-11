@@ -50,7 +50,7 @@ component {
 		// Let's add ourselves to the main menu in the Modules section
 		var menuService = controller.getWireBox().getInstance("AdminMenuService@cb");
 		// Add Menu Contribution
-		menuService.addSubMenu(topMenu=menuService.MODULES,name="Socialite",label="Socialite",href="#menuService.buildModuleLink('Socialite','settings')#");
+		menuService.addSubMenu(topMenu=menuService.MODULES,name="Socialite",label="Socialite",href="#menuService.buildModuleLink('cbSocialite','settings')#");
 	}
 
 	function onActivate() {
@@ -65,7 +65,7 @@ component {
 		// Let's remove ourselves to the main menu in the Modules section
 		var menuService = controller.getWireBox().getInstance("AdminMenuService@cb");
 		// Remove Menu Contribution
-		menuService.removeSubMenu(topMenu=menuService.MODULES,name="Socialite");
+		menuService.removeSubMenu(topMenu=menuService.MODULES,name="cbSocialite");
 
 	}
 
