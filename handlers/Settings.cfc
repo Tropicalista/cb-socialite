@@ -1,6 +1,6 @@
 component{
 
-	property name="settingsService"	inject="id:settings@socialite";
+	property name="settingsService"	inject="id:settings@cbsocialite";
 
 	//------------------------------------------------------------------------------------------------
 	//------------------------------------------------------------------------------------------------
@@ -19,7 +19,7 @@ component{
 	//------------------------------------------------------------------------------------------------
 	//------------------------------------------------------------------------------------------------
 	public function saveSettings(event, rc, prc) {
-		
+
 		prc.socialiteSettings = {};
 		prc.socialiteSettings.google = rc.google;
 		prc.socialiteSettings.facebook = rc.facebook;

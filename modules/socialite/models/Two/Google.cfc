@@ -1,4 +1,4 @@
-component extends="BaseProvider" implements="contentbox.modules_user.cbsocialite.models.contracts.IProvider" accessors="true"{
+component extends="BaseProvider" implements="socialite.models.contracts.IProvider" accessors="true"{
 
     /**
      * The separating character for the requested scopes.

@@ -8,6 +8,7 @@ component{
 	property name="authorService" 	inject="id:authorService@cb";
 	property name="securityService" 	inject="id:securityService@cb";
 	property name="cb"				inject="cbhelper@cb";
+	property name="settingsService"	inject="id:settings@cbsocialite";
 
 	function index(event,rc,prc){
 		event.setView("home/index");
@@ -15,14 +16,16 @@ component{
 
 	function auth(event,rc,prc){
 
-		var social = socialite.init().with(rc.provider);
+		var socialiteSettings = deserializeJson(settingsService.getSettings().getValue());
+		var social = socialite.init(socialiteSettings).with(rc.provider);
 		social.redirect();
 
 	}
 
 	function response(event,rc,prc){
 
-		prc.user = socialite.with(rc.provider).user(rc.code);
+		var socialiteSettings = deserializeJson(settingsService.getSettings().getValue());
+		prc.user = socialite.init(socialiteSettings).with(rc.provider).user(rc.code);
 
 		var author = authorService.findWhere( {
 			email = prc.user.email,

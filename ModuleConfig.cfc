@@ -1,5 +1,5 @@
 /**
-* 
+* ContentBox module to perform social authentication
 */
 component {
 
@@ -14,8 +14,8 @@ component {
 	// If true, looks for layouts in the parent first, if not found, then in module. Else vice-versa
 	this.layoutParentLookup = true;
 	// Module Entry Point
-	this.entryPoint			= "socialite";
-	this.modelNamespace		= "socialite";
+	this.entryPoint			= "cbsocialite";
+	this.modelNamespace		= "cbsocialite";
 
 	function configure(){
 
@@ -38,7 +38,7 @@ component {
 
 		// Custom Declared Interceptors
 		interceptors = [
-			{class="#moduleMapping#.interceptors.SocialAuth", name="socialauth@Socialite"}
+			{class="#moduleMapping#.interceptors.SocialAuth", name="socialauth@cbsocialite"}
 		];	
 
 	}
@@ -54,7 +54,7 @@ component {
 	}
 
 	function onActivate() {
-		var installerService = controller.getWireBox().getInstance("installerService@socialite");
+		var installerService = controller.getWireBox().getInstance("installerService@cbsocialite");
 		installerService.execute();
 	}
 
@@ -74,7 +74,7 @@ component {
 		
 		// remove settings
 		var settingService = controller.getWireBox().getInstance("SettingService@cb");
-		var args = { name="socialite" };
+		var args = { name="cbsocialite" };
 		var setting = settingService.findWhere( criteria=args );
 		if( !isNull( setting ) ){
 			settingService.delete( setting );

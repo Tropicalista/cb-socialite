@@ -13,7 +13,7 @@ component extends="contentbox.models.system.SettingService" accessors="true" sin
 	// get All our settings back from CB settings
 	//------------------------------------------------------------------------------------------------
 	public struct function getSettings() {
-		var settings = findWhere({name="socialite"});
+		var settings = findWhere({name="cbsocialite"});
 		return settings;
 	}
 }

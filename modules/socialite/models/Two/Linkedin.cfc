@@ -1,4 +1,4 @@
-component extends="BaseProvider" implements="contentbox.modules_user.cbsocialite.models.contracts.IProvider" accessors="true"{
+component extends="BaseProvider" implements="socialite.models.contracts.IProvider" accessors="true"{
 
     /**
      * The scopes being requested.
@@ -51,7 +51,7 @@ component extends="BaseProvider" implements="contentbox.modules_user.cbsocialite
      */
     function getTokenFields(code){
         params = super.getTokenFields(code);
-        params.grant_type = 'authorization_code';
+        params["grant_type"] = 'authorization_code';
         return params;
     }
 

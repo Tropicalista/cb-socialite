@@ -1,47 +1,25 @@
 {
     "name":"cbSocialite",
-    "version":"1.1.0",
+    "version":"1.0.0",
     "author":"Francesco Pepe",
-    "location":"",
-    "directory":"",
-    "createPackageDirectory":true,
-    "packageDirectory":"",
+    "location":"Tropicalista/cb-socialite#v1.1.0",
     "homepage":"https://github.com/Tropicalista/cb-socialite",
-    "documentation":"http://wiki.coldbox.org",
+    "documentation":"https://github.com/Tropicalista/cb-socialite",
     "repository":{
         "type":"git",
-        "url":"https://github.com/Tropicalista/cb-socialite"
+        "URL":"https://github.com/Tropicalista/cb-socialite"
     },
     "bugs":"https://github.com/Tropicalista/cb-socialite/issues",
-    "slug":"socialite",
-    "shortDescription":"An oauth2 module",
-    "description":"",
-    "instructions":"",
-    "changelog":"",
-    "type":"modules",
-    "keywords":"oauth2,oauth2 login",
-    "private":false,
-    "engines":[
-        {
-            "type":"railo",
-            "version":">4.1"
-        },
-        {
-            "type":"adobe",
-            "version":">9.02"
-        }
-    ],
-    "defaultEngine":"",
-    "defaultPort":0,
-    "projectURL":"",
-    "license":[
-        {
-            "type":"Apache2",
-            "url":"http://www.apache.org/licenses/LICENSE-2.0.html"
-        }
-    ],
+    "slug":"cbsocialite",
+    "shortDescription":"An oauth2 module to perform social login for ContentBox",
+    "type":"contentbox-modules",
     "dependencies":{
-        "cbstorages":"1.0.0",
-        "socialite":"stable"
+        "socialite":"^1.1.0",
+        "cbstorages":"^1.0.0"
+    },
+    "scripts":{
+        "postVersion":"package set location='Tropicalista/socialite#v`package version`'",
+        "onRelease":"publish",
+        "postPublish":"!git push && !git push --tags"
     }
 }
