@@ -22,7 +22,7 @@ component accessors="true" {
 	// Check to see if we have not already saved the settings, so that it is not duplicated.
 	//------------------------------------------------------------------------------------------------
 	public boolean function isReady() {
-		var setting = settingService.findWhere({name="socialite"});
+		var setting = settingService.findWhere({name="cbsocialite"});
 		if(isNUll(setting)) {
 			return false;
 		} else {
@@ -61,7 +61,7 @@ component accessors="true" {
 
 	public void function addSetting(required struct setting) {
 		var asettings = [];
-		var props = {name = "socialite", value = serializeJson(setting)};
+		var props = {name = "cbsocialite", value = serializeJson(setting)};
 
 		settingService.save( settingService.new(properties=props) );
 	}
