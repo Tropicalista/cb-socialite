@@ -1,6 +1,6 @@
 component accessors="true" {
 
-	property name="settingService" inject="settings@socialite";
+	property name="settingService" inject="settings@cbsocialite";
 
 	//------------------------------------------------------------------------------------------------
 	// Constructor
