@@ -2,7 +2,7 @@
     "name":"cbSocialite",
     "version":"1.2.0",
     "author":"Francesco Pepe",
-    "location":"Tropicalista/socialite#v1.2.0",
+    "location":"https://github.com/Tropicalista/cb-socialite#v1.2.0",
     "homepage":"https://github.com/Tropicalista/cb-socialite",
     "documentation":"https://github.com/Tropicalista/cb-socialite",
     "repository":{
@@ -18,7 +18,7 @@
         "cbstorages":"^1.0.0"
     },
     "scripts":{
-        "postVersion":"package set location='Tropicalista/socialite#v`package version`'",
+        "postVersion":"package set location='https://github.com/Tropicalista/cb-socialite#v`package version`'",
         "onRelease":"publish",
         "postPublish":"!git push --tags"
     }
