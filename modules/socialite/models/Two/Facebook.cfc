@@ -25,7 +25,7 @@ component extends="BaseProvider" implements="socialite.models.contracts.IProvide
      */
     function init( clientId, clientSecret, redirectUrl ){
         super.init( arguments.clientId, arguments.clientSecret, arguments.redirectUrl );
-        variables.version = 'v2.6';
+        variables.version = 'v2.9';
         variables.scopes = ['email'];
         variables.graphUrl = 'https://graph.facebook.com';
         variables.fields = "name,email,gender,verified";
@@ -87,7 +87,6 @@ component extends="BaseProvider" implements="socialite.models.contracts.IProvide
         httpService.setMethod( "get" ); 
         httpService.setUrl( variables.graphUrl & '/' & variables.version & '/me?access_token=' & token & '&fields=' & variables.fields );
         response = httpService.send().getPrefix();
-
         return deserializeJson(response.filecontent);
 
     }
@@ -102,7 +101,7 @@ component extends="BaseProvider" implements="socialite.models.contracts.IProvide
         return  {
             'id' = user['id'], 
             'nickname' = "", 
-            'name' = structKeyExists( user, 'first_name' ) ? user['first_name'] : "",
+            'name' = structKeyExists( user, 'name' ) ? user['name'] : "",
             'email' = structKeyExists( user, 'email' ) ? user['email'] : "", 
             'avatar' = avatarUrl & '?type=normal',
             'avatar_original' = avatarUrl & '?width=1920'
