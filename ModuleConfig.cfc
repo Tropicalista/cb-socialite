@@ -64,7 +64,7 @@ component {
 		// Let's remove ourselves to the main menu in the Modules section
 		var menuService = controller.getWireBox().getInstance("AdminMenuService@cb");
 		// Remove Menu Contribution
-		menuService.removeSubMenu(topMenu=menuService.MODULES,name="cbSocialite");
+		menuService.removeSubMenu(topMenu=menuService.MODULES,name="Socialite");
 
 	}
 
