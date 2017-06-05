@@ -2,7 +2,7 @@
 
 <div class="col-md-8">
 
-	#html.startForm(name="SocialiteSettingsForm", action=prc.CBHelper.buildModuleLink('Socialite', 'settings.saveSettings'))#
+	#html.startForm(name="SocialiteSettingsForm", action=prc.CBHelper.buildModuleLink('cbSocialite', 'settings.saveSettings'))#
 	#html.anchor(name="top")#
 	
 	<div class="panel panel-default">

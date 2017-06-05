@@ -19,72 +19,43 @@ Otherwise download from forgebox
 
 http://www.coldbox.org/forgebox/view/Socialite
 
-Configuration:
+# Configuration:
 
 You need to put your clientId, clientSecret and redirect url in config file.
 You can insert your data in ColdBox.cfc:
 
 ```
 		// Custom Settings
-		settings = {
-			oauth = {
+	    moduleSettings = {
+			socialite = {
 				facebook = {
 					client_id = "XXXXXXXXXXXXX",
 					client_secret = "XXXXXXXXXXXXX",
-					redirect_url = "http://localhost:49311/socialauth/provider/response/facebook"					
+					redirect_url = "http://YOUR-URL/provider/response/facebook"					
 				},
 				google = {
 					client_id = "XXXXXXXXXXXXX",
 					client_secret = "XXXXXXXXXXXXX",
-					redirect_url = "http://localhost:49311/socialauth/provider/response/google"					
+					redirect_url = "http://YOUR-URL/provider/response/google"					
 				},
 				github = {
 					client_id = "XXXXXXXXXXXXX",
 					client_secret = "XXXXXXXXXXXXX",
-					redirect_url = "http://localhost:49311/socialauth/provider/response/github"					
+					redirect_url = "http://YOUR-URL/provider/response/github"					
 				},
 				linkedin = {
 					client_id = "XXXXXXXXXXXXX",
 					client_secret = "XXXXXXXXXXXXX",
-					redirect_url = "http://127.0.0.1:49311/socialauth/provider/response/linkedin"					
+					redirect_url = "http://YOUR-URL/provider/response/linkedin"					
 				}
 			}
 		};
 ```
 
-or in ModuleConfig:
 
-```
-		// module settings - stored in modules.socialite.settings
-		settings = {
-			oauth = {
-				/*facebook = {
-					client_id = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					client_secret = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					redirect_url = "http://localhost/socialauth/provider/response/facebook"					
-				},
-				google = {
-					client_id = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					client_secret = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					redirect_url = "http://localhost/socialauth/provider/response/google"					
-				},
-				github = {
-					client_id = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					client_secret = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					redirect_url = "http://localhost/socialauth/provider/response/github"					
-				},
-				linkedin = {
-					client_id = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					client_secret = "XXXXXXXXXXXXXXXXXXXXXXXXX",
-					redirect_url = "http://127.0.0.1/socialauth/provider/response/linkedin"					
-				}*/
-			}
-		};
-```
+# Usage:
 
-Now simply go to http://yoururl/socialauth.
-
-Usage:
+In your handler 
 
 `socialite.init().with('facebook').redirect()`
 

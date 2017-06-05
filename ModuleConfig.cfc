@@ -8,9 +8,9 @@ component {
 	this.author 			= "Francesco Pepe";
 	this.webURL 			= "http://www.tropicalseo.net";
 	this.description 		= "A social login module";
-	this.version			= "1.0.0";
+	this.version			= "1.2.0";
 	// If true, looks for views in the parent first, if not found, then in the module. Else vice-versa
-	this.viewParentLookup 	= false;
+	this.viewParentLookup 	= true;
 	// If true, looks for layouts in the parent first, if not found, then in module. Else vice-versa
 	this.layoutParentLookup = true;
 	// Module Entry Point
@@ -21,9 +21,7 @@ component {
 
 		// module settings - stored in modules.name.settings
 		settings = {
-			oauth = {
 
-			}
 		};
 
 		// SES Routes
@@ -51,6 +49,7 @@ component {
 		var menuService = controller.getWireBox().getInstance("AdminMenuService@cb");
 		// Add Menu Contribution
 		menuService.addSubMenu(topMenu=menuService.MODULES,name="Socialite",label="Socialite",href="#menuService.buildModuleLink('cbSocialite','settings')#");
+
 	}
 
 	function onActivate() {

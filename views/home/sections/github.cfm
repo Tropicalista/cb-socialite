@@ -25,16 +25,9 @@
     )#
 
     <!--- Redirect Url --->
-    #html.textField( 
+    #html.hiddenField( 
         name="github.redirect_url",
-        label="Redirect Url:",
-        placeholder="#cgi.http_host#/cbsocialite/provider/response/github",
-        value="#prc.socialiteSettings.github.redirect_url#",
-        disabled="false",
-        class="form-control",
-        wrapper="div class=controls",
-        labelClass="control-label",
-        groupWrapper="div class=form-group"
+        value="#cb.linkHome()#cbsocialite/provider/response/github"
     )#
 
 </fieldset>

@@ -28,6 +28,6 @@ component{
 
 		// Probably should not be here, and should be in the service but its here for now.
 		settingsService.addSetting(prc.socialiteSettings);
-		setNextEvent('cbadmin.module.socialite.settings');
+		setNextEvent('cbadmin.module.cbSocialite.settings');
 	}
 }

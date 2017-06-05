@@ -28,16 +28,9 @@
     )#
 
     <!--- Redirect Url --->
-    #html.textField( 
+    #html.hiddenField( 
         name="facebook.redirect_url",
-        label="Redirect Url:",
-        placeholder="#cgi.http_host#/cbsocialite/provider/response/facebook",
-        value="#prc.socialiteSettings.facebook.redirect_url#",
-        class="form-control",
-        title="The Facebook redirect url: your domain + /socialite/provider + /response/facebook",
-        wrapper="div class=controls",
-        labelClass="control-label",
-        groupWrapper="div class=form-group"
+        value="#cb.linkHome()#cbsocialite/provider/response/facebook"
     )#
 
 </fieldset>

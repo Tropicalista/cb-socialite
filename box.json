@@ -14,12 +14,11 @@
     "shortDescription":"An oauth2 module to perform social login for ContentBox",
     "type":"contentbox-modules",
     "dependencies":{
-        "socialite":"^1.1.0",
-        "cbstorages":"^1.0.0"
+        "socialite":"^1.3.0"
     },
     "scripts":{
         "postVersion":"package set location='https://github.com/Tropicalista/cb-socialite#v`package version`'",
         "onRelease":"publish",
-        "postPublish":"!git push --tags"
+        "postPublish":"!git push && !git push --tags"
     }
 }

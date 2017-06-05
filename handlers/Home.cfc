@@ -3,12 +3,18 @@
 */
 component{
 
-	property name="socialite" inject="SocialiteManager@socialite";
-	property name="user" inject="BaseUser@socialite";
+	property name="user" 			inject="BaseUser@socialite";
 	property name="authorService" 	inject="id:authorService@cb";
-	property name="securityService" 	inject="id:securityService@cb";
+	property name="securityService" inject="id:securityService@cb";
 	property name="cb"				inject="cbhelper@cb";
 	property name="settingsService"	inject="id:settings@cbsocialite";
+	property name="socialite" 		inject="socialitemanager@socialite";
+
+	function preHandler(){
+
+		prc.socialiteSettings = deserializeJson(settingsService.getSettings().getValue());
+
+	}
 
 	function index(event,rc,prc){
 		event.setView("home/index");
@@ -16,16 +22,17 @@ component{
 
 	function auth(event,rc,prc){
 
-		var socialiteSettings = deserializeJson(settingsService.getSettings().getValue());
-		var social = socialite.init(socialiteSettings).with(rc.provider);
+		var social = socialite.init(prc.socialiteSettings).with(rc.provider);
 		social.redirect();
 
 	}
 
 	function response(event,rc,prc){
 
-		var socialiteSettings = deserializeJson(settingsService.getSettings().getValue());
-		prc.user = socialite.init(socialiteSettings).with(rc.provider).user(rc.code);
+		if( !structKeyExists( rc, "code" ) ){
+			setNextEvent( "cbadmin.security" );
+		}
+		prc.user = socialite.init(prc.socialiteSettings).with(rc.provider).user(rc.code);
 
 		var author = authorService.findWhere( {
 			email = prc.user.email,
