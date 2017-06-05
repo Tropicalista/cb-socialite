@@ -5,6 +5,9 @@
     "location":"https://github.com/Tropicalista/cb-socialite/archive/master.zip",
     "homepage":"https://github.com/Tropicalista/cb-socialite",
     "documentation":"https://github.com/Tropicalista/cb-socialite",
+    "directory":"",
+    "createPackageDirectory":true,
+    "packageDirectory":"cbSocialite",
     "repository":{
         "type":"git",
         "URL":"https://github.com/Tropicalista/cb-socialite"
