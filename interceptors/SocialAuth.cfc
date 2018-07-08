@@ -7,7 +7,7 @@ component extends="coldbox.system.Interceptor" {
 
 		prc.socialiteSettings = deserializeJson(settingsService.getSettings().getValue());
 
-		addAsset("#event.getModuleRoot( "contentbox" )#/modules_user/cbSocialite/includes/css/socialite.css");	
+		addAsset("#event.getModuleRoot( "cbsocialite" )#/includes/css/socialite.css");	
 
 		savecontent variable="buttons" {
 			if( len( prc.socialiteSettings.google.client_secret ) ){
@@ -23,11 +23,10 @@ component extends="coldbox.system.Interceptor" {
 				writeOutput('<a href="cbsocialite/provider/github" class="btn btn-block github social"><i class="fa fa-github"></i> Github</a>');
 			}
 			writeOutput('
-				<br/>
 				<hr/>
-				<br/>
 			');
 		};
+
 		appendToBuffer( buttons );
 
 	}

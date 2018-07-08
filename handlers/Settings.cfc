@@ -21,10 +21,10 @@ component{
 	public function saveSettings(event, rc, prc) {
 
 		prc.socialiteSettings = {};
-		prc.socialiteSettings.google = rc.google;
-		prc.socialiteSettings.facebook = rc.facebook;
-		prc.socialiteSettings.linkedin = rc.linkedin;
-		prc.socialiteSettings.github = rc.github;
+		prc.socialiteSettings["google"] = rc.google;
+		prc.socialiteSettings["facebook"] = rc.facebook;
+		prc.socialiteSettings["linkedin"] = rc.linkedin;
+		prc.socialiteSettings["github"] = rc.github;
 
 		// Probably should not be here, and should be in the service but its here for now.
 		settingsService.addSetting(prc.socialiteSettings);
